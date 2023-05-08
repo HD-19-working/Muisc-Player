@@ -1,0 +1,15 @@
+<!--pages/videoPage/video.wxml-->
+<view>
+  <view class="video_container">
+    <view class="box">
+    <block wx:for="{{mv_data}}" wx:key="id">
+      <view wx:if="{{index % 11 != 0}}" class="item">
+        <VideoItem videoData="{{item}}" />
+      </view>
+      <view wx:if="{{index % 11 == 0}}" class="item_huge">
+        <VideoItemHuge  videoData="{{item}}"></VideoItemHuge>
+      </view>
+    </block>
+    </view>
+  </view>
+</view>

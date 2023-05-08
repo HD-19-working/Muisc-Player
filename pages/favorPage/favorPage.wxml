@@ -1,0 +1,20 @@
+<!--pages/favorPage/favorPage.wxml-->
+<view>
+  <view class="favor_item_box" 
+        wx:for="{{songIdList}}" 
+        wx:key="*this">
+    <SongItem songId="{{item}}" 
+              songIndex="{{index+1}}" 
+              bind:addTap="addFn"/>
+  </view>
+  <van-popup
+    show="{{ show }}"
+    round
+    position="bottom">
+    <van-picker columns="{{ columns }}" 
+                bind:cancel="onCancel"
+                bind:confirm="onConfirm"
+                show-toolbar
+                title="歌单列表"/>
+  </van-popup>
+</view>

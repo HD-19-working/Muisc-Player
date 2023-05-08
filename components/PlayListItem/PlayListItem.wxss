@@ -1,0 +1,63 @@
+/* components/RecommondItem/RecommondItem.wxss */
+.itemBox{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  padding: 10px;
+  background-color: #2C2C2C;
+  border-radius: 24px;
+  margin: 10px 0;
+  font-weight: 400;
+  color: whitesmoke;
+}
+.imgItem{
+  width: 20%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.textBox{
+  font-size: 14px;
+  padding-left: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.listName{
+  
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.creatorName{
+  font-size: 12px;
+  color: #C0C0C0;
+}
+.hotShowContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hotShowBox{
+  width: 75%;
+  border-radius: 30px;
+  height: 6px;
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+.hotShow{
+  background-color: orangered;
+  height: 100%;
+  transition: width 1s;
+}
+.hotShowText{
+  font-size: 12px;
+  font-weight: 600;
+  color: orangered;
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+}

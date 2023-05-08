@@ -1,0 +1,25 @@
+/* components/CustomisedBar/CustomisedBar.wxss */
+.backIcon_box{
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+.icon_button{
+  box-sizing: border-box;
+  /* background-color: rgba(255, 255,255, 0.2);
+  backdrop-filter: blur(20px); */
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 10px;
+  /* top: 24px; */
+  z-index: 999;
+}
+.image_item{
+  width: 26px;
+  height: 26px;
+}

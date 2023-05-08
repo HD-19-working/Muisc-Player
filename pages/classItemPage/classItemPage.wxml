@@ -1,0 +1,8 @@
+<!--pages/classItemPage/classItemPage.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="item" wx:for="{{playList}}" wx:key="id">
+      <ClassPlayList itemData="{{item}}" />
+    </view>
+  </view>
+</view>

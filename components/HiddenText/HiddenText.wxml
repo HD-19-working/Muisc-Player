@@ -1,0 +1,6 @@
+<!--components/HiddenText/HiddenText.wxml-->
+<wxs module="formate" src="../../utils/formate.wxs"></wxs>
+
+<view class="text_box" bindtap="showAll">
+  {{showText}}<text class="text_hidden" wx:if="{{isShow}}">...</text>
+</view>

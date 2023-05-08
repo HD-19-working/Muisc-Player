@@ -1,0 +1,12 @@
+/* pages/classItemPage/classItemPage.wxss */
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+.item{
+  width: 48.16%;
+  margin: 6px 0;
+}

@@ -1,0 +1,14 @@
+/* components/MusicList/MusicList.wxss */
+.container{
+  width: 100%;
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: hidden;
+}
+.recommondItem{
+  flex-grow: 0;
+  flex-shrink: 0;
+}

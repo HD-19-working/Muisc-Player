@@ -1,0 +1,4 @@
+/* pages/songListPage/songListPage.wxss */
+.list_item_box{
+  margin: 10px 0;
+}

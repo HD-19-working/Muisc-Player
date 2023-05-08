@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "VideoItem":"../../components/VideoItem/VideoItem",
+    "VideoItemHuge":"../../components/VideoItemHuge/VideoItemHuge"
+  }
+}

@@ -1,0 +1,24 @@
+<!--components/RecommondItem/RecommondItem.wxml-->
+<wxs module="formate" src="/utils/formate.wxs"></wxs>
+
+<view class="itemBox" bindtap="toPlayListPage">
+    <image class="imgItem" 
+           src="{{itemData.coverImgUrl}}" 
+           mode="widthFix" />
+    <view class="textBox">
+      <view class="listName">
+        {{itemData.name}}
+      </view>
+      <view class="creatorName">
+        {{itemData.creator.nickname}}
+      </view>
+      <view class="hotShowContainer">
+        <view class="hotShowBox">
+          <view style="{{showBoxWidth}}" class="hotShow"></view>
+        </view>
+        <view class="hotShowText">
+          {{formate.formateCount(itemData.playCount)}}
+        </view>
+      </view>
+    </view>
+</view>

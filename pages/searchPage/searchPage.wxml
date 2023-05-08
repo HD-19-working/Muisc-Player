@@ -1,0 +1,24 @@
+<!--pages/searchPage/searchPage.wxml-->
+<view class="searchPage_container">
+    <van-search
+      value="{{ value }}"
+      shape="round"
+      background="#121212"
+      placeholder="请输入搜索关键词"
+      bind:search="searchKeywords"
+    ></van-search>
+    <view class="tag_box">
+      <view class="tag_search_container">
+        <view>热门搜索</view>
+        <view class="tag_search_box">
+          <text wx:for="{{tag_search}}" wx:key="item">{{item}}</text>
+        </view>
+      </view>
+      <view class="tag_history_container">
+        <view>历史记录</view>
+        <view class="tag_history_box">
+          <text wx:for="{{tag_history}}" wx:key="item">{{item}}</text>
+        </view>
+      </view>
+    </view>
+</view>

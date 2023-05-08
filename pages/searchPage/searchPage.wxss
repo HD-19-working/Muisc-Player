@@ -1,0 +1,32 @@
+/* pages/searchPage/searchPage.wxss */
+.searchPage_container{
+  background-color: #121212;
+  height: 100vh;
+  color: whitesmoke;
+}
+.tag_box{
+  width: 90%;
+  margin: 0 auto;
+}
+.tag_search_container>view:nth-child(1),
+.tag_history_container>view:nth-child(1){
+  margin: 10px 0;
+}
+.tag_search_box,
+.tag_history_box{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.tag_search_box>text{
+  padding: 6px 10px;
+  color: #649C75;
+}
+.tag_history_container{
+  margin-top: 20px;
+}
+.tag_history_box>text{
+  padding: 6px 10px;
+  color: gray;
+}

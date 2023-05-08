@@ -1,0 +1,22 @@
+<!--components/SongTag/SongTag.wxml-->
+<view class="container" wx:if="{{isShow}}">
+  <view class="lyric_container">
+    -{{currentLyric}}-
+  </view>
+  <image class="song_img" 
+         src="{{songData.al.picUrl}}" 
+         mode="widthFix" 
+         bindtap="toSongPage"/>
+  <view class="song_info" bindtap="toSongPage">
+    <view class="song_name">
+      {{songData.name}}
+    </view>
+    <view class="song_lyric">
+      --{{songData.ar[0].name}}
+    </view>
+  </view>
+  <image class="button_img" 
+         src="{{btnImg}}" 
+         mode="widthFix" 
+         bindtap="stateControl"/>
+</view>

@@ -1,0 +1,10 @@
+/* components/HiddenText/HiddenText.wxss */
+.text_box{
+  font-size: 12px;
+  text-indent: 2em;
+}
+.text_hidden{
+  font-size: 12px;
+  display: inline-block;
+  text-indent: 0;
+}

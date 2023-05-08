@@ -1,0 +1,33 @@
+<!--pages/videoItemPage/videoItemPage.wxml-->
+<wxs module="formate" src="/utils/formate.wxs"></wxs>
+
+<view>
+  <video class="mv_video"
+         src="{{mv_video.url}}" 
+         controls="false"
+         autoplay="true" object-fit="fill" />
+  <scroll-view class="video_container" scroll-y="true">
+    <view class="video_body">
+      <view class="video_name">
+        <text>{{mv_data.name}}</text>
+      </view>
+      <view class="video_artist">
+        <text>{{mv_data.artistName}}</text>
+      </view>
+      <view class="video_info">
+        <text>{{formate.formateCount(mv_data.playCount)}}次播放 - {{mv_data.publishTime}}</text>
+      </view>
+      <view class="video_text">
+        <HiddenText textData="{{mv_data.desc}}" len="50" />
+      </view>
+    </view>
+    <view class="related_body">
+      <view class="related_name">
+        推荐视频
+      </view>
+      <RelatedItem wx:for="{{related_data}}" 
+                  wx:key="vid" 
+                  itemData="{{item}}" />
+    </view>
+  </scroll-view>
+</view>

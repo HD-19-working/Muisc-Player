@@ -1,0 +1,12 @@
+<!--components/CustomisedBar/CustomisedBar.wxml-->
+<view>
+  <view class="status_bar" style="height: {{statusHeight}}px;"></view>
+  <view class="backIcon_box" style="position: {{isHidden ? 'absolute':'relative'}};">
+    <view class="icon_button" bindtap="backTo">
+      <image 
+      src="/assets/img/backIcon.png" 
+      mode="aspectFill" 
+      class="image_item" />
+    </view>
+  </view>
+</view>

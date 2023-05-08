@@ -1,0 +1,9 @@
+<!--components/ClassItem/ClassItem.wxml-->
+<view>
+  <view class="box"
+        style="background-color: {{itemData.bk_color}};" 
+        bindtap="toClassItemPage">
+    <view class="content_text">{{itemData.name}}</view>
+    <image class="content_img" src="{{itemData.img_src}}" mode="widthFix"/>
+  </view>
+</view>

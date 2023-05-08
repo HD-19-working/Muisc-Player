@@ -1,0 +1,35 @@
+/* pages/videoItemPage/videoItemPage.wxss */
+.mv_video{
+  width: 100%;
+}
+.video_container{
+  height: calc(100vh - 225px);
+  color: whitesmoke;
+}
+.video_body{
+  padding: 10px 16px;
+}
+.video_name{
+  font-size: large;
+  font-weight: 600;
+  padding: 2px 0;
+}
+.video_artist{
+  font-size: small;
+  color: #C0C0C0;
+  padding: 4px 0;
+}
+.video_info{
+  font-size: small;
+  color: whitesmoke;
+  padding: 2px 0;
+}
+.video_text{
+  margin-top: 8px;
+}
+.related_body{
+  padding: 10px 16px;
+}
+.related_name{
+  padding: 5px 0;
+}

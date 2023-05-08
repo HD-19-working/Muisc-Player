@@ -1,0 +1,18 @@
+/* pages/videoPage/video.wxss */
+.video_container{
+  width: 100%;
+  background: linear-gradient(#121212, #1A1A1A);
+}
+.box{
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item{
+  width: 49%;
+}
+.item_huge{
+  width: 100%;
+}

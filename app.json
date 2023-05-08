@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/indexPage/index",
+    "pages/userPage/user",
+    "pages/videoPage/video",
+    "pages/videoItemPage/videoItemPage",
+    "pages/searchPage/searchPage",
+    "pages/classPage/classPage",
+    "pages/albumPage/albumPage",
+    "pages/playListPage/playListPage",
+    "pages/classItemPage/classItemPage",
+    "pages/songPage/songPage",
+    "pages/favorPage/favorPage",
+    "pages/songListPage/songListPage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#141414",
+    "navigationBarBackgroundColor": "#141414",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "backgroundColor": "#202020",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/indexPage/index",
+        "iconPath": "/assets/img/music_icon.png",
+        "selectedIconPath": "/assets/img/music_icon_selected.png"
+      },
+      {
+        "pagePath": "pages/classPage/classPage",
+        "iconPath": "/assets/img/class_icon.png",
+        "selectedIconPath": "/assets/img/class_icon_selected.png"
+      },
+      {
+        "pagePath": "pages/videoPage/video",
+        "iconPath": "assets/img/mv_icon.png",
+        "selectedIconPath": "assets/img/mv_icon_selected.png"
+      },
+      {
+        "pagePath": "pages/userPage/user",
+        "iconPath": "assets/img/user_icon.png",
+        "selectedIconPath": "assets/img/user_icon_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,17 @@
+<!--components/ClassPlayList/ClassPlayList.wxml-->
+<wxs module="formate" src="/utils/formate.wxs"></wxs>
+
+<view class="container" bindtap="toPlayListPage">
+  <image class="image_item" src="{{itemData.coverImgUrl}}" mode="widthFix"/>
+  <view class="masking">
+    <view class="playCount_tag">
+      <image class="tag_image" src="/assets/img/playIcon.png" mode="widthFix"/>
+      <text>{{formate.formateCount(itemData.playCount)}}</text>
+    </view>
+    <view 
+      wx:if="{{itemData.alg != 'alg_sq_official_tagOnly'}}" 
+      class="content_container">
+      <text>{{itemData.name}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<!--components/PlayList/PlayList.wxml-->
+<view class="container">
+  <block wx:for="{{recommondList}}" wx:key="id">
+    <PlayListItem sumPlayCount="{{recommondPlayCount}}" 
+                    itemData="{{item}}"/>
+  </block>
+</view>

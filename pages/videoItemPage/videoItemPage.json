@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "RelatedItem":"../../components/RelatedItem/RelatedItem",
+    "HiddenText":"../../components/HiddenText/HiddenText"
+  }
+}

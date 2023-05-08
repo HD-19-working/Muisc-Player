@@ -1,0 +1,8 @@
+<!--pages/songListPage/songListPage.wxml-->
+<view>
+  <view class="list_item_box" 
+        wx:for="{{songIdList}}" 
+        wx:key="*this">
+    <SongItem songId="{{item}}" songIndex="{{index+1}}" />
+  </view>
+</view>

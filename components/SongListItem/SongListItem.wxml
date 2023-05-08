@@ -1,0 +1,18 @@
+<!--components/SongListItem/SongListItem.wxml-->
+<view class="container" bindtap="toSongListPage">
+  <view class="box">
+    <image class="cover_image" 
+         src="{{imageSrc}}"  
+         mode="widthFix"/>
+    <view class="cover_masking"></view>
+    <view class="cover_masking_roll_first"></view>
+    <view class="cover_masking_roll_second"></view>
+  </view>
+  <view class="content_box">
+      <view>{{listName}}</view>
+      <view class="songNum_box">
+        <image src="/assets/img/song_list.png" mode="widthFix"/>
+        <text>{{songNum}}</text>
+      </view>
+  </view>
+</view>

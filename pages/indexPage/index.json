@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "AlbumList":"/components/AlbumList/AlbumList",
+    "IndexSection":"/components/IndexSection/IndexSection",
+    "PlayList":"/components/PlayList/PlayList",
+    "PlayListItem":"/components/PlayListItem/PlayListItem",
+    "SongTag":"/components/SongTag/SongTag"
+  }
+}
+
+

@@ -1,0 +1,35 @@
+<!--pages/index/index.wxml-->
+<view class="index_container">
+    <van-search
+      value="{{ value }}"
+      shape="round"
+      placeholder="请输入搜索关键词"
+      bind:click-input="linkToSearch"
+      background="#141414"
+    />
+    <swiper class="banner" 
+            style="{{banner_style}}"
+            circular 
+            indicator-dots 
+            autoplay indicator-active-color="#c83c23" indicator-color="#FFFFFF">
+      <swiper-item wx:for="{{bannerList}}" wx:key="index">
+        <image class="banner_image" 
+               src="{{item.imageUrl}}" 
+               mode="widthFix" 
+               bindload="setHeight" />    
+               <!-- 绑定load事件，图片加载成功后触发setHeight -->
+      </swiper-item>
+    </swiper>
+
+    <IndexSection isTitle="{{true}}" titleVal="最新专辑">
+      <AlbumList listData="{{albumList}}"></AlbumList>
+    </IndexSection>
+
+    <IndexSection isTitle="{{true}}" titleVal="热门歌单">
+      <PlayList recommondList="{{recommondList}}"></PlayList>
+    </IndexSection>
+
+    <SongTag />
+</view>
+
+

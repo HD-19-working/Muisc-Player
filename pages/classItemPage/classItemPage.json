@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "ClassPlayList":"/components/ClassPlayList/ClassPlayList"
+  },
+  "onReachBottomDistance": 100,
+  "enablePullDownRefresh": true
+}

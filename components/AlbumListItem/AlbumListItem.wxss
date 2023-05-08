@@ -1,0 +1,32 @@
+/* components/MusicListItem/MusicListItem.wxss */
+.container{
+  background-color: #282828;
+  font-family: "微软正黑体";
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 6%;
+  font-size: small;
+  font-weight: 400;
+  filter: contrast(0.95);
+  color: whitesmoke;
+}
+.container>image{
+  width: 100%;
+  border-radius: 6%;
+  box-shadow: 0 0 8px 4px #161616;
+}
+.content_box>view:nth-child(1){
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.content_box>view:nth-child(2){
+  overflow: hidden;
+  margin-bottom: 5px;
+  text-overflow:ellipsis; /* 文本超出呈现方式：省略号 */
+  display:-webkit-box; /* 盒模型 */
+  -webkit-line-clamp:2; /* 限制文本行数 */
+  -webkit-box-orient:vertical; /* 盒内子元素布局方向 */
+}

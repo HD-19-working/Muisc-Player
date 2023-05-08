@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ClassItem":"/components/ClassItem/ClassItem"
+  },
+  "enablePullDownRefresh": false
+}

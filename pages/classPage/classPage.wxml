@@ -1,0 +1,6 @@
+<!--pages/classPage/classPage.wxml-->
+<view class="container">
+  <view class="box" wx:for="{{classData}}" wx:key="name">
+    <ClassItem itemData="{{item}}" />
+  </view>
+</view>

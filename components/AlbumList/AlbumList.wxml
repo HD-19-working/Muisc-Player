@@ -1,0 +1,16 @@
+<!--components/MusicList/MusicList.wxml-->
+<scroll-view class="container" 
+             scroll-x="true" 
+             scroll-y="false"
+             show-scrollbar="false"
+             enhanced="true"
+             >
+  <view class="box" style="width: {{box_width}};">
+    <view wx:for="{{listData}}" 
+        wx:key="id" 
+        style="width: {{item_width}};"
+        class="recommondItem">
+      <AlbumListItem itemData="{{item}}"></AlbumListItem>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "SongItem":"/components/SongItem/SongItem",
+    "CustomisedBar":"/components/CustomisedBar/CustomisedBar",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom"
+}

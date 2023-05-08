@@ -1,0 +1,8 @@
+<!--components/MusicListItem/MusicListItem.wxml-->
+<view class="container" bindtap="toAlbumPage">
+  <image src="{{itemData.blurPicUrl}}" mode="widthFix"/>
+  <view class="content_box">
+    <view>{{itemData.artists[0].name}}</view>
+    <view>{{itemData.name}}</view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+/* components/indexSection/indexSection.wxss */
+.container{
+  width: 92%;
+  margin: 30px auto;
+}
+.content_title{
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 14px 2%;
+}

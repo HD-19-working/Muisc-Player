@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "CustomisedBar":"/components/CustomisedBar/CustomisedBar",
+    "SongItem":"/components/SongItem/SongItem"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false
+}

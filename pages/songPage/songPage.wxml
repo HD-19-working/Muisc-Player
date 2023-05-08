@@ -1,0 +1,96 @@
+<!--pages/songPage/songPage.wxml-->
+<wxs src="/utils/formate.wxs" module="formate"></wxs>
+<wxs src="/utils/blurLyric.wxs" module="blurLyric"></wxs>
+
+<view class="container">
+  <CustomisedBar></CustomisedBar>
+  <image class="backImage" src="{{songData.al.picUrl}}" mode="aspectFill"/>
+  <view class="masking">
+  </view>
+  <swiper style="height:{{contentHeight}}px">
+    <swiper-item class="music_head">
+      <view class="image_container" 
+            style="height: {{songListBoxHeight}}px;">
+        <scroll-view class="songList_box {{list_state}}" 
+                     style="height: {{songListBoxHeight}}px"
+                     scroll-y>
+          <view class="songList_item" wx:for="{{songList}}" wx:key="*this">
+            <SongItem songId="{{item}}" songIndex="{{index+1}}" />
+          </view>
+        </scroll-view>
+        <image class="song_image {{image_state}}" 
+               src="{{songData.al.picUrl}}" 
+               mode="widthFix" 
+               bindload="setHeight" />
+      </view>
+      <view class="song_data">
+        <view class="content_box">
+          <view class="song_name">
+            {{songData.name}}
+          </view>
+          <view class="song_creator">
+            {{songData.ar[0].name}}
+          </view>
+        </view>
+        <image class="favor_icon" 
+               src="{{favor_src}}" 
+               mode="aspectFill" 
+               bindtap="addFavor" />
+      </view>
+      <view class="song_lyric_box">
+        <view class="song_lyric">
+          {{currentLyric}}
+        </view>
+      </view>
+      <view class="song_control">
+        <slider class="slider_item" 
+                bindchange="sliderChange" 
+                backgroundColor="#8d8a8a" 
+                block-size="12" 
+                value="{{currentSlider}}"
+                activeColor="white"/>
+        <view class="slider_time">
+          <text>{{formate.formateTime(currentTime)}}</text>
+          <text>{{formate.formateTime(durationTime)}}</text>
+        </view>
+        <view class="tap_control">
+          <image src="{{play_style_img}}" 
+                 bindtap="changePlayMode" 
+                 mode="aspectFill"/>
+          <image bindtap="toLastSong" 
+                 src="/assets/img/last_song.png" 
+                 mode="aspectFill"/>
+          <image bindtap="switchState" 
+                 src="{{stateImage}}" 
+                 mode="aspectFill"/>
+          <image bindtap="toNextSong" 
+                 src="/assets/img/next_song.png" 
+                 mode="aspectFill"/>
+          <image src="/assets/img/favor_list.png" 
+                 mode="aspectFill" 
+                 bindtap="showList"/>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item class="music_lyric">
+      <scroll-view scroll-y="true" 
+                   class="lyric_item_box" 
+                   scroll-top="{{scrollTopDistance}}px" 
+                   scroll-with-animation>
+        <view style="height: {{contentHeight/5}}px"></view>
+        <view class="lyric_item" 
+              wx:for="{{parsedLyric}}" 
+              wx:key="time" 
+              style="color: {{index == currentLyricIndex ?'whitesmoke':'#C0C0C0'}};">
+          <!-- <view class="lyric_item_masking"></view> -->
+          <view class="lyric_item_content {{index == currentLyricIndex ? 'lyric_item_content_selected':''}}" 
+                style="filter: blur({{blurLyric.blurState(index,currentLyricIndex)}}px);">
+                {{item.content}}
+          </view> 
+          
+        </view>
+        <view style="height: {{contentHeight*0.75}}px"></view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

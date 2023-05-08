@@ -1,0 +1,4 @@
+/* pages/favorPage/favorPage.wxss */
+.favor_item_box{
+  margin: 10px 0;
+}

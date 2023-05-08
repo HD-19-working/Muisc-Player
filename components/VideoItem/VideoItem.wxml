@@ -1,0 +1,24 @@
+<!--components/VideoItem/VideoItem.wxml-->
+<wxs module="formate" src="/utils/formate.wxs"></wxs>
+
+<view class="mv_box" bindtap="toVideoItemPage">
+    <view class="video_image_box">
+      <image class="video_image" 
+           mode="widthFix"
+           src="{{videoData.cover}}" alt="歌曲{{videoData.name}}图片"/>
+      <view class="video_tag">
+        <view class="text_box">
+          <text class="playcount_tag">{{formate.formateCount(videoData.playCount)}}</text>
+         <text class="time_tag">{{formate.formateTime(videoData.mv.videos[0].duration)}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="video_text">
+      <view class="content_text">
+        {{videoData.name}}
+      </view>
+      <view class="creator_text">
+        {{videoData.artistName}}
+      </view>
+    </view>
+</view>

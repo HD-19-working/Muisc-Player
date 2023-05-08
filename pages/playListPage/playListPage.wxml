@@ -1,0 +1,35 @@
+<!--pages/playListPage/playListPage.wxml-->
+<CustomisedBar isHidden="{{true}}"></CustomisedBar>
+<view style="padding-bottom: 20px;">
+  <view class="image_box">
+    <image src="{{playListData.coverImgUrl}}" mode="aspectFill"/>
+    <view class="masking">
+      <view class="head_box">
+        <view>{{playListData.name}}</view>
+        <view>{{playListData.creator.nickname}}</view>
+        <!-- <view>{{playListData.description}}</view> -->
+      </view>
+      <view class="play_all">
+        <image src="/assets/img/playSquare.png" mode="widthFix"/>
+        <text>全部播放({{playListData.trackIds.length}})</text>
+      </view>
+    </view>
+  </view>
+  <view class="container">
+    <view wx:for="{{playListData.trackIds}}" class="song_item" wx:key="id">
+      <SongItem songId="{{item.id}}" 
+                songIndex="{{index+1}}" 
+                bind:addTap="addFn"></SongItem> 
+    </view>
+  </view>
+  <van-popup
+    show="{{ show }}"
+    round
+    position="bottom">
+    <van-picker columns="{{ columns }}" 
+                bind:cancel="onCancel"
+                bind:confirm="onConfirm"
+                show-toolbar
+                title="歌单列表"/>
+  </van-popup>
+</view>

@@ -1,0 +1,25 @@
+<!--components/RelatedItem/RelatedItem.wxml-->
+<wxs module="formate" src="../../utils/formate.wxs"></wxs>
+
+<view class="main_box" bindtap="linkToVideo">
+  <view class="video_image_box">
+    <image class="video_image" 
+          mode="widthFix"
+          src="{{itemData.coverUrl}}" alt="歌曲{{videoData.title}}图片"/>
+    <view class="video_tag">
+      <text class="playcount_tag">{{formate.formateCount(itemData.playTime)}}</text>
+      <text class="time_tag">{{formate.formateTime(itemData.durationms)}}</text>
+    </view>
+  </view>
+  <view class="text_box">
+    <view class="text_title">
+      <text>{{itemData.title}}</text>
+    </view>
+    <view class="text_artist">
+      <block wx:for="{{itemData.creator}}" wx:key="userId">
+        <text wx:if="{{index%2 === 1}}">、</text>
+        <text>{{item.userName}}</text>
+      </block>
+    </view>
+  </view>
+</view>

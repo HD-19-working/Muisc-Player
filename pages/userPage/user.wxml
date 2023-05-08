@@ -1,0 +1,89 @@
+<!--pages/user/user.wxml-->
+<view>
+  <view class="overlay" wx:if="{{is_show}}">
+    <view class="input_container">
+      <view class="title_box">
+        <text>新建歌单</text>
+      </view>
+      <view class="input_box">
+        <input type="text" 
+               name="listName" 
+               minlength="1" 
+               maxlength="10" 
+               placeholder="请输入歌单名称"
+               bindinput="updateVal" />
+      </view>
+      <view class="botton_box">
+        <button class="button_item" 
+                size="default" 
+                catchtap="cancelBtn">取消</button>
+        <button class="button_item" 
+                size="default" 
+                catchtap="checkBtn">确定</button>
+      </view>
+    </view>
+  </view>
+  <view class="user_container" bindtap="userLogin">
+    <image src="{{user_src}}" mode="widthFix"/>
+    <view>
+      {{user_name}}
+    </view>
+  </view>
+  <view class="favor_list_container">
+    <view class="favor_list_title">
+      喜欢/历史播放歌曲
+    </view>
+    <view class="favor_list_box" bindtap="toFavorPage">
+      <view class="favor_box">
+        <image src="{{favor_src}}" mode="widthFix"/>
+        <view class="favor_list_content_box">
+          <view>
+            歌曲数量: {{favor_num}}
+          </view>
+          <view>
+            上一次更新: {{favor_lasttime}}
+          </view>
+        </view>
+      </view>
+      <view class="history_box">
+        <image src="{{songList[3].cover_url}}" mode="widthFix"/>
+        <view class="favor_list_content_box">
+          <view>
+            歌曲数量: {{1}}
+          </view>
+          <view>
+            上一次更新: {{favor_lasttime}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="square_container">
+      <view class="favor_square">
+        <view class="side_front">
+          <image src="{{favor_src}}" mode="widthFix"/>
+        </view>
+        <view class="side_back"></view>
+        <view class="side_top"></view>
+        <view class="side_left"></view>
+        <view class="side_bottom"></view>
+        <view class="side_right">
+        </view>
+      </view>
+    </view> -->
+  </view>
+  <view class="song_list_container">
+    <view class="song_list_title">
+      <text>我的歌单</text>
+      <image src="/assets/img/add_button.png" 
+             mode="widthFix" 
+             bindtap="addSongList" />
+    </view>
+    <view class="song_list_box">
+      <view wx:for="{{songList}}" wx:key="_id">
+        <SongListItem listName="{{item.name}}" 
+                      imageSrc="{{item.cover_url}}" 
+                      songNum="{{item.num}}" />
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,191 @@
+/* pages/songPage/songPage.wxss */
+@keyframes move_leave{
+  0%{
+    transform: scale3d(1,1,1);
+    opacity: 1;
+  }
+  50%{
+    transform: scale3d(0.1,0.1,1);
+    opacity: 1;
+  }
+  100%{
+    transform: scale3d(1,1,1);
+    opacity: 0;
+  }
+}
+@keyframes move_show{
+  0%{
+    transform: scale3d(1,1,1);
+    opacity: 0;
+  }
+  50%{
+    transform: scale3d(0.1,0.1,1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale3d(1,1,1);
+    opacity: 1;
+  }
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  color: whitesmoke;
+}
+.backImage,.masking{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+.backImage{
+  z-index: -2;
+}
+.masking{
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+}
+.music_head{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 30px 40px 30px;
+  box-sizing: border-box;
+}
+.image_container{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.song_image,.song_lyric_box{
+  flex-shrink: 0;
+}
+.song_image{
+  position: absolute;
+  width: 100%;
+  border-radius: 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  /* box-shadow: rgba(36, 35, 35, 0.4) 5px 5px, rgba(36, 35, 35, 0.3) 10px 10px, rgba(36, 35, 35, 0.2) 15px 15px, rgba(36, 35, 35, 0.1) 20px 20px, rgba(36, 35, 35, 0.05) 25px 25px; */
+}
+.moveLeave{
+  animation: move_leave 1s ease-out forwards;
+}
+.moveShow{
+  animation: move_show 1s ease-out forwards;
+  z-index: 999;
+}
+/* .showClass{
+  z-index: 999;
+} */
+.songList_box{
+  width: 100%;
+  position: absolute;
+  border-radius: 15px;
+  background-color: rgba(20,20,20,0.5);
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.songList_item{
+  margin: 6px 0;
+}
+.song_data{
+  display: flex;
+}
+.content_box{
+  width: 0px; /*如果给外层盒子设置一个固定宽度，则内层的flex布局盒子能做到超出文本省略*/
+  flex: 1;
+}
+.song_name{
+  font-size: 20px;
+}
+.song_creator{
+  color: #C0C0C0;
+}
+.favor_icon{
+  width: 28px;
+  height: 28px;
+}
+.song_creator,.song_name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.song_lyric_box{
+  height: 46px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.song_lyric{
+  display: flex;
+  height: 46px;
+  color: #f0eeee;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slider_item{
+  margin: 0;
+}
+.slider_time{
+  display: flex;
+  justify-content: space-between;
+}
+.tap_control{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tap_control>image:nth-child(2),.tap_control>image:nth-child(4){
+  width: 30px;
+  height: 30px;
+}
+.tap_control>image:nth-child(1){
+  width: 24px;
+  height: 24px;
+}
+.tap_control>image:nth-child(3){
+  width: 56px;
+  height: 56px;
+}
+.tap_control>image:nth-child(5){
+  width: 22px;
+  height: 22px;
+}
+
+.music_lyric{
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.lyric_item_box{
+  height: 100%;
+}
+.lyric_item{
+  margin: 30px 20px;
+  font-size: 36rpx;
+  font-weight: 600;
+  position: relative;
+}
+.lyric_item_content{
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border-radius: 16px;
+  transition: transform 0.5s,box-shadow 0.5s;
+  transform: rotate3d(1,1,0,30deg);
+  box-shadow: transparent 0px 0px 0px 2px inset, rgba(255, 255, 255, 0.2) 6px -6px 10px -1px,rgba(255, 255, 255, 0.2) 0px 6px 10px -8px;
+  word-wrap:break-word;
+}
+.lyric_item_content_selected{
+  transform: scale3d(1.05,1.05,1);
+  /* box-shadow: transparent 0px 0px 0px 2px inset, rgba(255, 255, 255, 0.2) 6px -6px 10px 0px; */
+  box-shadow: none;
+}

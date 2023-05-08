@@ -1,0 +1,23 @@
+<!--components/SongItem/SongItem.wxml-->
+<view class="container">
+  <text class="song_index">{{songIndex}}</text>
+  <view class="box">
+    <view class="content_box" bindtap="toSongPage">
+      <view class="song_text">
+        {{songData.name}}
+      </view>
+      <view class="artist_text">
+        {{songData.ar[0].name}}
+      </view>
+    </view>
+    <view class="tab_box">
+      <image src="{{favor_src}}" 
+             catchtap="addFavor" 
+             mode="widthFix"/>
+      <image src="/assets/img/add_button.png" 
+             mode="widthFix" 
+             bindtap="addList"/>
+      <image src="/assets/img/share_button.png" mode="widthFix"/>
+    </view>
+  </view>
+</view>

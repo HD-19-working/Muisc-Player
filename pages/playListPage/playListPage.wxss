@@ -1,0 +1,67 @@
+/* pages/playListPage/playListPage.wxss */
+.image_box{
+  position: relative;
+  font-size: 0;
+}
+.image_box>image{
+  width: 100%;
+  height: 340px;
+}
+.masking{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(to top,rgba(20,20,20) 5%,rgba(20,20,20,0.5) 100px,rgba(20,20,20,0.1) 150px,transparent 80%,rgba(20,20,20,0.2) 85%,rgba(20,20,20,0.4) 90%,rgba(20,20,20,0.6) 95%,rgba(20,20,20) 100%);
+  /* linear-gradient(155deg,rgba(20,20,20) 10%,rgba(20,20,20,0.4) 20%, rgba(20,20,20,0.2) 30%,transparent 50%) */
+}
+.head_box{
+  color: whitesmoke;
+  font-family: "微软正黑体";
+  position: absolute;
+  bottom: 0;
+  padding: 0 20px;
+  margin: 15px 0;
+  width: 220px;
+}
+.head_box>view{
+  padding: 3px 0;
+}
+.head_box>view:nth-child(1){
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  overflow: hidden;
+}
+.head_box>view:nth-child(2){
+  font-size: 14px;
+  line-height: 18px;
+  color: #C0C0C0;
+}
+.container{
+  width: 92%;
+  margin: 10px auto;
+}
+.play_all{
+  position: absolute;
+  color: whitesmoke;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  bottom: 24px;
+  right: 14px;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter:blur(3px);
+  border-radius: 15px;
+}
+.play_all>image{
+  width: 24px;
+  height: 24px;
+}
+.play_all>text{
+  padding: 0 4px;
+}
+.song_item{
+  margin: 10px 0;
+}

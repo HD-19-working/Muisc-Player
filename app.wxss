@@ -1,0 +1,10 @@
+/**app.wxss**/
+::-webkit-scrollbar{
+  color: transparent;
+  display: none;
+  width: 0;
+  height: 0;
+}
+page{
+  background-color: #141414;
+}

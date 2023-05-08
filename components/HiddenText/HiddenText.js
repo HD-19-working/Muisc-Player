@@ -1,0 +1,33 @@
+// components/HiddenText/HiddenText.js
+Component({
+  properties:{
+    textData:{
+      type:String,
+      value:"",
+      observer(newVal,oldVal){
+        if(newVal){
+          this.setData({
+            showText:newVal.slice(0,this.properties.len),
+            isShow:true
+          })
+        }
+      }
+    },
+    len:{
+      type:Number,
+      value:30
+    }
+  },
+  data:{
+    isShow:false,
+    showText:""
+  },
+  methods:{
+    showAll(){
+      this.setData({
+        showText:this.properties.textData,
+        isShow:false
+      })
+    }
+  }
+})

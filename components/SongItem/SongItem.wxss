@@ -1,0 +1,45 @@
+/* components/SongItem/SongItem.wxss */
+.container{
+  color:whitesmoke;
+  display: flex;
+  align-items: center;
+}
+.song_index{
+  display: inline-block;
+  width: 40px;
+  padding-right: 5px;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.box{
+  display: flex;
+  flex-grow: 1;
+}
+.content_box{
+  flex-grow: 1;
+  width: 0px;/*给父盒子设置一个固定宽度，使得内部元素的宽度即可以动态变化又不会挤兑其他元素*/
+}
+.song_text,.artist_text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+.artist_text{
+  font-size: 14px;
+  color: #C0C0C0;
+}
+.tab_box{
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: space-between;
+  width: 100px;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+.tab_box>image{
+  width: 22px;
+}

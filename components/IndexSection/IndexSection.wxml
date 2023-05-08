@@ -1,0 +1,5 @@
+<!--components/indexSection/indexSection.wxml-->
+<view class="container">
+  <view wx:if="{{isTitle}}" class="content_title">{{titleVal}}</view>
+  <slot></slot>
+</view>
